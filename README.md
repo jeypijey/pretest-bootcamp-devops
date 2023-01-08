@@ -48,3 +48,15 @@ Silahkan buat docker-compose filenya, kemudian simpan dalam folder `tasks` denga
 2. Kenapa Orchestration Container System seperti Kubernetes sangat popular (menurut anda)?
 
 Cara pengerjaan, silahkan update file ini tulis jawabanya di bawah ini
+
+JAWABAN TASK 3 !
+
+1. Container orchestration adalah proses otomatis untuk mengelola atau menjadwalkan pekerjaan masing-masing container untuk aplikasi berdasarkan layanan mikro dalam beberapa kluster. Platform orchestration kontainer yang digunakan secara luas didasarkan pada versi sumber terbuka seperti Kubernetes, Docker Swarm, atau versi komersial dari Red Hat OpenShift.
+
+2. - Multi-tenancy: Membuat pemisahan cluster K8S memanfaatkan OpenStack Projects.
+   - Penggunaan infrastruktur berdasarkan pemisahan HW: Departemen TI sering menjadi broker utama bagi tim pengembangan di seluruh organisasi.
+   - Alokasi infrastruktur berdasarkan kuota: Sejak menentukan berapa banyak infrastruktur yang Anda tetapkan untuk kasus penggunaan yang berbeda bisa menjadi rumit. Organisasi juga dapat memanfaatkan sistem kuota OpenStack untuk mengendalikan penggunaan Infrastruktur.
+   - Manajemen user yang terintegrasi: Karena kebanyakan pengembang K8S juga merupakan konsumen IaaS, leverage backend dapat menyederhanakan otentikasi pengguna untuk cluster K8S dan berbagi namespace.
+   - Persistence storage kontainer: Karena pods K8S tidak durable, storage persistence adalah persyaratan untuk beban kerja yang paling banyak.
+   - Keamanan: Karena VM dan kontainer akan terus hidup berdampingan untuk sebagian besar aplikasi enterprise dan NFV. Oleh karena itu, memberikan penegakan keamanan yang seragam merupakan sesuatu yang sangat penting
+   - Container control plane flexibility: Persyaratan K8S HA memerlukan load balanced Multi-master dan scaleable worker nodes. Ketika Terpadu dengan OpenStack, sangat sederhana, sama halnya seperti Leverage LBaaSv2 untuk master node load balancing.
